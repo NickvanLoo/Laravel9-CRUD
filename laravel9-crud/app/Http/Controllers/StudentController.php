@@ -37,8 +37,8 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        Student::create($input);
-        return redirect('student')->with('flash_message', 'Student toegevoegd!'); 
+        Student::create($input);
+        return redirect('student')->with('flash_message', 'Student toegevoegd!'); 
     }
 
     /**
@@ -50,7 +50,7 @@ class StudentController extends Controller
     public function show($id)
     {
         $student = Student::find($id);
-        return view('students.show')->with('students', $student);
+        return view('students.show')->with('students', $student);
     }
 
     /**
@@ -62,7 +62,7 @@ class StudentController extends Controller
     public function edit($id)
     {
         $student = Student::find($id);
-        return view('students.edit')->with('students', $student);
+        return view('students.edit')->with('students', $student);
     }
 
     /**
@@ -75,9 +75,9 @@ class StudentController extends Controller
     public function update(Request $request, $id)
     {
         $student = Student::find($id);
-        $input = $request->all();
-        $student->update($input);
-        return redirect('student')->with('flash_message', 'student geupdated!');  
+        $input = $request->all();
+        $student->update($input);
+        return redirect('student')->with('flash_message', 'student geupdated!');  
     }
 
     /**
@@ -89,6 +89,6 @@ class StudentController extends Controller
     public function destroy($id)
     {
         Student::destroy($id);
-        return redirect('student')->with('flash_message', 'Student verwijderd!');  
+        return redirect('student')->with('flash_message', 'Student verwijderd!');  
     }
 }
