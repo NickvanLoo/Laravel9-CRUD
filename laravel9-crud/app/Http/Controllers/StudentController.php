@@ -15,7 +15,7 @@ class StudentController extends Controller
     public function index()
     {
         $students = Student::all();
-        return view('students.index')->with('students', $students);
+        return view('index')->with('students', $students);
     }
 
     /**
@@ -25,7 +25,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return view('students.create');
+        return view('create');
     }
 
     /**
@@ -50,7 +50,7 @@ class StudentController extends Controller
     public function show($id)
     {
         $student = Student::find($id);
-        return view('students.show')->with('students', $student);
+        return view('show')->with('students', $student);
     }
 
     /**
@@ -62,7 +62,7 @@ class StudentController extends Controller
     public function edit($id)
     {
         $student = Student::find($id);
-        return view('students.edit')->with('students', $student);
+        return view('edit')->with('students', $student);
     }
 
     /**
