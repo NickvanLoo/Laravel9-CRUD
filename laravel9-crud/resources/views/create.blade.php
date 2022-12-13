@@ -5,13 +5,13 @@
         <div class="card-body">
             <form action="{{ url('student') }}" method="post">
                 {!! csrf_field() !!}
-                <label>Naam</label></br>
-                <input type="text" name="name" id="name" class="form-control"></br>
-                <label>Adres</label></br>
-                <input type="text" name="address" id="address" class="form-control"></br>
-                <label>Telefoonnummer</label></br>
-                <input type="text" name="mobile" id="mobile" class="form-control"></br>
-                <input type="submit" value="Opslaan" class="btn btn-success"></br>
+                <label>Naam:</label><br>
+                <input type="text" name="name" id="name" class="form-control"><br>
+                <label>Adres:</label><br>
+                <input type="text" name="address" id="address" class="form-control"><br>
+                <label>Telefoonnummer:</label><br>
+                <input type="text" name="mobile" id="mobile" class="form-control"><br>
+                <input type="submit" value="Opslaan" class="btn btn-success"><br>
             </form>
         </div>
 </div>
