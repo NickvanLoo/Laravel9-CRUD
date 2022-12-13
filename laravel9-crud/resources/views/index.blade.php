@@ -12,13 +12,13 @@
                         <br>
                         <br>
                         <div class="table-responsive">
-                            <div class="table">
+                            <table class="table">
                                 <thead>
                                     <tr>
                                         <th>#</th>
                                         <th>Naam</th>
                                         <th>Adres</th>
-                                        <th>Mobiel</th>
+                                        <th>Telefoonnummer</th>
                                         <th>Acties</th>
                                     </tr>
                                 </thead>
@@ -30,19 +30,19 @@
                                             <td>{{ $item->address }}</td>
                                             <td>{{ $item->mobile }}</td>
                                             <td>
-                                            <a href="{{ url('/student/' . $item->id) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                            <a href="{{ url('/student/' . $item->id . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                            <a href="{{ url('/student/' . $item->id) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Bekijk</button></a>
+                                            <a href="{{ url('/student/' . $item->id . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Bewerk</button></a>
                                             
                                             <form method="POST" action="{{ url('/student' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Student" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Student" onclick="return confirm("Confirm delete?")"><i class="fa fa-trash-o" aria-hidden="true"></i> Verwijderen</button>
                                             </form>
                                             </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
-                            </div>
+                            </table>
                         </div>
                     </div>
                 </div>
