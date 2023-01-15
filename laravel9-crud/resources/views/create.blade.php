@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
-<div class="card" style="margin: 20px;">
-    <div class="card-header">Creëer nieuwe student</div>
+    <div class="card" style="margin: 20px;">
+        <div class="card-header">Creëer nieuwe student</div>
         <div class="card-body">
             <form action="{{ url('student') }}" method="post">
                 {!! csrf_field() !!}
@@ -14,5 +14,5 @@
                 <input type="submit" value="Opslaan" class="btn btn-success"><br>
             </form>
         </div>
-</div>
+    </div>
 @stop
